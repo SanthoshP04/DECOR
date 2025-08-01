@@ -1,0 +1,142 @@
+/* .home-product-cards {
+    width: 254px;
+
+    .home-product-stars>div {
+        justify-content: center;
+    }
+}
+
+.home-product-cards:hover {
+    .card-body {
+        background-color: var(--primary-color);
+        color: var(--white);
+
+        .card-title {
+            color: var(--white);
+        }
+
+        .card-text {
+            color: var(--white);
+        }
+
+        .card-text span {
+            color: var(--white);
+        }
+    }
+} */
+ /* HomeProductCards.css */
+
+.home-product-cards {
+    transition: all 0.3s ease;
+    cursor: pointer !important;
+    text-decoration: none !important;
+    color: inherit !important;
+    /* Ensure the card is clickable */
+    pointer-events: auto !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.home-product-cards:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+.home-product-cards:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.home-product-cards:hover .card-image {
+    transform: scale(1.05);
+}
+
+.card-shadow {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.text-overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.home-product-stars {
+    pointer-events: none; /* Prevent stars from interfering with card clicks */
+}
+
+.home-product-stars .react-stars {
+    pointer-events: none !important;
+}
+
+/* Fix for ReactStars component interfering with clicks */
+.home-product-cards .react-stars * {
+    pointer-events: none !important;
+}
+
+/* Ensure all child elements don't interfere with parent click */
+.home-product-cards * {
+    pointer-events: none;
+}
+
+.home-product-cards {
+    pointer-events: auto !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .home-product-cards {
+        margin-bottom: 1rem;
+    }
+    
+    .card-image {
+        height: 180px;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-image {
+        height: 160px;
+    }
+}
+
+/* Additional fixes for Bootstrap Card as Link */
+a.home-product-cards,
+a.home-product-cards:hover,
+a.home-product-cards:focus,
+a.home-product-cards:active {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+/* Fix for Link component styling conflicts */
+.home-product-cards.card {
+    display: block;
+    color: inherit;
+}
+
+.home-product-cards.card:hover {
+    color: inherit;
+}
+
+/* Ensure proper clickable area */
+.home-product-cards {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Fix for any z-index issues */
+.home-product-cards {
+    z-index: 1;
+    position: relative;
+}

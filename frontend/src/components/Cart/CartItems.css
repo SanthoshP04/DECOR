@@ -1,0 +1,17 @@
+.product-cart-items{
+    height: 550px;
+}
+
+.product-cart-items--image {
+    width: 87px;
+    height: 87px;
+
+    @media screen and (min-width:992px) {
+        width: 148px;
+        height: 148px;
+    }
+}
+
+.addtocart-dropdown {
+    min-width: 82px !important;
+}

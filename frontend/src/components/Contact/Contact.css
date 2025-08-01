@@ -1,0 +1,19 @@
+.contact-info-circles div {
+    width: 25px;
+    height: 25px;
+}
+
+.contact-way::before {
+    content: "";
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 15px;
+    background-color: rgb(110, 8, 244);
+}
+
+.contact-way:nth-child(2):before {
+    content: "";
+    background-color: rgb(6, 128, 14);
+}

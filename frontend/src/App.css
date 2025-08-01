@@ -1,0 +1,389 @@
+/* Utitlies */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+:root {
+    --page-color: #e3e6e6;
+    --primary-color: #151875;
+    --secondary-color: #fb2e86;
+    --red-color: #fb2448;
+    --button-color: #ffc107;
+    --blue-100-color: #2f1ac4;
+    --blue-200-color: #3f509e;
+    --blue-300-color: #151875;
+    --blue-400-color: #15245e;
+    --blue-500-color: #1d3178;
+    --blue-600-color: #0d0e43;
+    --blue-700-color: #1a0b5b;
+    --purple-100-color: #f3f9ff;
+    --purple-200-color: #e0d3f5;
+    --purple-300-color: #7e33e0;
+    --purple-400-color: #9f63b5;
+    --gray-100-color: #8a91ab;
+    --gray-200-color: #f4f4fc;
+    --gray-300-color: #f8f8fd;
+    --gray-400-color: #eeeffb;
+    --gray-500-color: #9096b2;
+    --gray-600-color: #e7e4f8;
+    --green-100-color: #19d16f;
+    --green-200-color: #dfffee;
+    --pink-100-color: #febad7;
+    --pink-200-color: #fff6fb;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+#root {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.container {
+    max-width: 1177px !important;
+}
+
+/* Background Colors */
+
+.bg-primary-color {
+    background-color: var(--primary-color);
+}
+
+.bg-secondary-color {
+    background-color: var(--secondary-color) !important;
+}
+
+.bg-blue-100 {
+    background-color: var(--primary-color);
+}
+
+.bg-blue-200 {
+    background-color: var(--secondary-color);
+}
+
+.bg-blue-300 {
+    background-color: var(--page-color);
+}
+
+.bg-purple-100-color {
+    background-color: var(--purple-100-color);
+}
+
+.bg-purple-300-color {
+    background-color: var(--purple-300-color);
+}
+
+.bg-gray-200-color {
+    background-color: var(--gray-200-color);
+}
+
+.bg-gray-300-color {
+    background-color: var(--gray-300-color) !important;
+}
+
+.bg-gray-400-color {
+    background-color: var(--gray-400-color);
+}
+
+.bg-gray-600-color {
+    background-color: var(--gray-600-color);
+}
+
+.bg-green-100-color {
+    background-color: var(--green-100-color) !important;
+}
+
+.bg-green-200-color {
+    background-color: var(--green-200-color);
+}
+
+.bg-pink-200-color {
+    background-color: var(--pink-200-color);
+}
+
+/* Text Colors */
+
+.text-primary-color {
+    color: var(--primary-color);
+}
+
+.text-secondary-color {
+    color: var(--secondary-color);
+}
+
+.text-blue-300-color {
+    color: var(--blue-300-color);
+}
+
+.text-blue-400-color {
+    color: var(--blue-400-color);
+}
+
+.text-blue-500-color {
+    color: var(--blue-500-color);
+}
+
+.text-blue-700-color {
+    color: var(--blue-700-color);
+}
+
+.text-gray-100-color {
+    color: var(--gray-100-color);
+}
+
+.text-gray-500-color {
+    color: var(--gray-500-color);
+}
+
+.text-blue-600-color {
+    color: var(--blue-600-color);
+}
+
+/* Fonts */
+
+.font-lato {
+    font-family: 'Lato', sans-serif;
+}
+
+.font-35 {
+    font-size: 35px;
+}
+
+.font-32 {
+    font-size: 32px;
+}
+
+.font-26 {
+    font-size: 26px;
+}
+
+.font-24 {
+    font-size: 24px;
+}
+
+.font-22 {
+    font-size: 22px;
+}
+
+.font-20 {
+    font-size: 20px;
+}
+
+.font-18 {
+    font-size: 18px !important;
+}
+
+.font-17 {
+    font-size: 17px;
+}
+
+.font-16 {
+    font-size: 16px !important;
+}
+
+.font-14 {
+    font-size: 14px !important;
+}
+
+.font-12 {
+    font-size: 12px;
+}
+
+/* Actions and other styles */
+.h-100vh {
+    min-height: 100vh;
+}
+
+.h-80vh {
+    min-height: 80vh;
+}
+
+.h-60vh {
+    min-height: 60vh;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.navbar-toggler {
+    filter: invert(1);
+}
+
+.text-overflow {
+    width: 100%;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.line-clamp-1 {
+    -webkit-line-clamp: 1;
+}
+
+.object-fit-contain {
+    object-fit: contain;
+}
+
+.object-fit-cover {
+    object-fit: cover;
+}
+
+.list-style-position {
+    list-style-position: inside;
+}
+
+.list-style-none {
+    list-style: none;
+}
+
+.card-shadow {
+    box-shadow: 3px 3px 25px -10px rgba(0, 0, 0, 0.1), -3px -3px 25px -10px rgba(0, 0, 0, 0.1);
+    ;
+}
+
+/* -------------- LAYOUT CSS -------------- */
+.btn[role="button"] {
+    width: 163px;
+    height: 50px;
+    font-size: 17px;
+}
+
+textarea,
+input,
+button:focus {
+    box-shadow: none !important;
+}
+
+/* Search Icon Cancel Button */
+input[type="search"]::-webkit-search-decoration:hover,
+input[type="search"]::-webkit-search-cancel-button:hover {
+    cursor: pointer;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--secondary-color);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, .5);
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: var(--gray-200-color);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, .4);
+}
+
+/* Pagination */
+.pagination>.page-item>.page-link {
+    border-radius: 0 !important;
+}
+
+.pagination>.page-item.active>.page-link {
+    background-color: var(--secondary-color);
+    border: 0;
+}
+
+/* Accordion */
+.accordion {
+    .accordion-button:focus {
+        border-color: transparent;
+        box-shadow: none;
+    }
+
+    .accordion-button[aria-expanded="true"] {
+        background-color: var(--secondary-color);
+        color: var(--white);
+    }
+
+    .accordion-button[aria-expanded="false"] {
+        background-color: var(--secondary-color);
+        color: var(--white);
+    }
+
+    .accordion-button::after {
+        content: "";
+        filter: invert(1);
+    }
+}
+
+/* product-details-carousel */
+.product-details-dropdown {
+    min-width: 47px !important;
+}
+
+/* Global users page - Login, Forgot password, Signup */
+.users-page .h5 {
+    font-size: 32px;
+}
+
+.users-page .card {
+    @media screen and (min-width:768px) {
+        width: 544px;
+        margin: auto;
+    }
+}
+
+/* .users-page .form-control {
+    @media screen and (min-width:768px) {
+         height: 52px;
+    }
+} */
+
+.users-page button {
+    font-family: 'Lato', sans-serif;
+    font-size: 17px;
+
+    @media screen and (min-width:768px) {
+        height: 47px;
+    }
+}
+
+.register-image img {
+    width: 122px;
+    height: 100px;
+}
+
+.register-image>input[type=file] {
+    color: transparent
+}
+
+.register-image>input::file-selector-button {
+    width: 100%;
+    height: 52px;
+}
+
+/* Home and Products Cards */
+.product-cards .cards img{
+    height: 280px;
+}
+.home-product-cards img{
+    height: 280px;
+}
+.home-latest-product-cards img{
+    height: 280px;
+}
+
+/* New and update product -- admin */
+.admin-products img {
+    min-width: 100%;
+
+    @media screen and (min-width:768px) {
+        min-width: 25%;
+    }
+}
+
+/* Your account */
+.profile-container {
+    max-width: 598px !important;
+    height: 60vh;
+}
+
+/* Footer */
+.footer-social-media img {
+    width: 19px;
+    height: 19px;
+}

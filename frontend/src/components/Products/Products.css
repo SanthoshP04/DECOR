@@ -1,0 +1,273 @@
+/* Base Styles */
+.products-page {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+/* Sticky Header Effects */
+.products-header {
+    transition: all 0.3s ease;
+    z-index: 990;
+    top: 0;
+}
+
+.products-header.scrolled {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+
+/* Floating Filter Button for Mobile */
+.floating-filter-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: auto;
+    padding: 0.75rem 1.25rem;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Filter Column Effects */
+.filters-column {
+    transition: all 0.3s ease;
+}
+
+.filters-column.mobile-show {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 85%;
+    height: 100vh;
+    z-index: 1001;
+    background: white;
+    padding: 1rem;
+    overflow-y: auto;
+    box-shadow: 5px 0 15px rgba(0,0,0,0.1);
+    transform: translateX(0);
+}
+
+.filters-column:not(.mobile-show) {
+    transform: translateX(-100%);
+}
+
+@media (min-width: 768px) {
+    .filters-column {
+        transform: translateX(0) !important;
+    }
+}
+
+/* Active Filters */
+.active-filters {
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--bs-primary);
+}
+
+.active-filters .badge {
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+.active-filters .badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Product Grid/List View */
+.list-view {
+    display: grid;
+    gap: 1.5rem;
+}
+
+/* Enhanced Product Card Effects */
+.product-card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.05);
+    border-radius: 0.5rem !important;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+    border-color: rgba(var(--bs-primary-rgb), 0.3);
+}
+
+.product-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.product-card:hover::after {
+    opacity: 1;
+}
+
+/* Product Image Effects */
+.product-card .card-img-top {
+    transition: transform 1s ease, opacity 0.3s ease;
+    transform-origin: center center;
+}
+
+.product-card:hover .card-img-top {
+    transform: scale(1.1);
+}
+
+/* Quick View Button Effect */
+.quick-view-btn {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all 0.4s ease;
+    z-index: 10;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-radius: 50px;
+    padding: 0.5rem 1.25rem;
+    font-weight: 500;
+}
+
+.product-card:hover .quick-view-btn {
+    bottom: 20px;
+    opacity: 1;
+}
+
+/* Price Display Animation */
+.price-display {
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.product-card:hover .price-display {
+    color: var(--bs-primary);
+    animation: pricePulse 1.5s infinite alternate;
+}
+
+@keyframes pricePulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.05); }
+}
+
+/* Rating Stars Animation */
+.rating-stars {
+    transition: all 0.3s ease;
+}
+
+.product-card:hover .rating-stars {
+    transform: scale(1.1);
+}
+
+/* List View Specific Styles */
+.list-view .product-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+}
+
+.list-view .product-card .card-img-top {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-right: 1.5rem;
+}
+
+.list-view .product-card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.list-view .product-card:hover {
+    transform: translateX(10px);
+}
+
+/* Pagination Effects */
+.pagination .page-link {
+    transition: all 0.3s ease;
+    border-radius: 50% !important;
+    margin: 0 3px;
+    border: none;
+    min-width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bs-dark);
+}
+
+.pagination .page-link:hover {
+    background-color: rgba(var(--bs-primary-rgb), 0.1) !important;
+    transform: scale(1.1);
+    color: var(--bs-primary);
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(var(--bs-primary-rgb), 0.3);
+}
+
+/* View Mode Toggle Effects */
+.btn-view-mode {
+    transition: all 0.3s ease;
+}
+
+.btn-view-mode.active {
+    background-color: var(--bs-primary) !important;
+    color: white !important;
+    box-shadow: 0 4px 8px rgba(var(--bs-primary-rgb), 0.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767.98px) {
+    .products-header {
+        position: sticky;
+        top: 0;
+        z-index: 990;
+    }
+    
+    .list-view .product-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .list-view .product-card .card-img-top {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Loading Skeleton Animation */
+@keyframes shimmer {
+    0% { background-position: -468px 0 }
+    100% { background-position: 468px 0 }
+}
+
+.skeleton {
+    animation: shimmer 1.5s infinite linear;
+    background: linear-gradient(to right, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%);
+    background-size: 800px 104px;
+}

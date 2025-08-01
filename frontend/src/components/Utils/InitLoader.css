@@ -1,0 +1,50 @@
+.initLoader {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.text-gradient {
+    background: linear-gradient(45deg, #5f07ec, #3906d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 1.5s ease-in-out infinite;
+    z-index: 1;
+}
+
+.ring {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 4px solid transparent;
+    border-top-color: #7609fa;
+    border-right-color: #660df7;
+    border-radius: 50%;
+    animation: spin 1.2s linear infinite;
+    box-shadow: 0 0 10px rgba(144, 124, 234, 0.5), 0 0 20px rgba(134, 59, 238, 0.3);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px rgba(48, 16, 195, 0.5), 0 0 10px rgba(9, 44, 199, 0.3);
+    }
+    50% {
+        text-shadow: 0 0 10px rgba(66, 10, 221, 0.8), 0 0 20px rgba(101, 18, 243, 0.5);
+    }
+    100% {
+        text-shadow: 0 0 5px rgba(84, 9, 247, 0.804), 0 0 10px rgba(98, 9, 240, 0.3);
+    }
+}
