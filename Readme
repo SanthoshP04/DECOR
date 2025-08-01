@@ -1,1 +1,50 @@
+🏡 Home Decor Products - MERN Stack Project
+A full-featured E-commerce web application built using the MERN stack (MongoDB, Express.js, React.js, Node.js), showcasing stylish and elegant home decor products such as furniture, lighting, wall art, and more.
 
+📦 Features
+🛍️ Browse Products: Explore a variety of home decor items with images, prices, and detailed descriptions.
+
+🔍 Search & Filter: Find products by name, category, or price range.
+
+🛒 Cart System: Add, update, and remove products from the cart.
+
+💳 Secure Checkout: Integrated PayPal/Stripe payment system.
+
+👤 User Authentication: Login, registration, JWT-based auth.
+
+🧑‍💻 Admin Panel:
+
+Manage Products (Create, Edit, Delete)
+
+View & Update Orders
+
+Manage Users
+
+🌐 Responsive Design: Mobile-first, fully responsive layout.
+
+🛠️ Tech Stack
+Frontend:
+
+React.js
+
+Redux Toolkit
+
+React Router
+
+Bootstrap / Tailwind CSS
+
+Backend:
+
+Node.js
+
+Express.js
+
+MongoDB with Mongoose
+
+Other Tools:
+
+JSON Web Token (JWT) for authentication
+
+Multer / Cloudinary for image uploads
+
+dotenv for environment configuration
